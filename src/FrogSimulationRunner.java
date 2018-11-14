@@ -4,8 +4,7 @@ public class FrogSimulationRunner {
     private int[] testHops;
     private int nextHopIndex;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int[][] hopSequences =
                 {
                         {5, 7, -2, 8, 6},
@@ -17,12 +16,11 @@ public class FrogSimulationRunner {
 
         FrogSimulation sim = new FrogSimulation(24, 5);
 
-        for (int i = 0; i < hopSequences.length; i++)
-        {
+        for (int i = 0; i < hopSequences.length; i++) {
             sim.testHops = hopSequences[i];
             sim.nextHopIndex = 0;
             sim.maxHops = sim.testHops.length;
-            System.out.println("Simulation # " + (i+1) + ": " + sim.simulate());
+            System.out.println("Simulation # " + (i + 1) + ": " + sim.simulate());
         }
 
         sim.testHops = hopSequences[0];

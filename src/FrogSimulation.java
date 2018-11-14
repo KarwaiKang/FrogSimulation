@@ -13,34 +13,26 @@ public class FrogSimulation {
         return hop;
     }
 
-    public boolean simulate()
-    {
+    public boolean simulate() {
         int position = 0;
-        for (int count = 0; count < maxHops; count++)
-        {
+        for (int count = 0; count < maxHops; count++) {
             position += hopDistance();
-            if (position >= goalDistance)
-            {
+            if (position >= goalDistance) {
                 return true;
-            }
-            else if (position < 0)
-            {
+            } else if (position < 0) {
                 return false;
             }
         }
         return false;
     }
 
-    public double runSimulations(int num)
-    {
+    public double runSimulations(int num) {
         int countSuccess = 0;
-        for (int count = 0; count < num; count++)
-        {
-            if(simulate())
-            {
+        for (int count = 0; count < num; count++) {
+            if (simulate()) {
                 countSuccess++;
             }
         }
-        return (double)countSuccess / num;
+        return (double) countSuccess / num;
     }
 }
