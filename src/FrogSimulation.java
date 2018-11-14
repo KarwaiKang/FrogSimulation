@@ -1,18 +1,14 @@
 public class FrogSimulation {
-    int maxHops, goalDistance, nextHopIndex;
+    int goalDistance, maxHops, nextHopIndex;
     int[] testHops;
 
     public FrogSimulation(int goalDistance, int maxHops) {
-        this.maxHops = maxHops;
         this.goalDistance = goalDistance;
+        this.maxHops = maxHops;
     }
 
     public int hopDistance() {
-        int hop;
-        if (nextHopIndex != 0)
-            hop = testHops[nextHopIndex % testHops.length];
-        else
-            hop = testHops[0];
+        int hop = testHops[nextHopIndex % testHops.length];
         nextHopIndex++;
         return hop;
     }
