@@ -21,7 +21,8 @@ public class FrogSimulationRunner {
         {
             sim.testHops = hopSequences[i];
             sim.nextHopIndex = 0;
-            System.out.println("Simulation # " + i+1 + ": " + sim.simulate());
+            sim.maxHops = sim.testHops.length;
+            System.out.println("Simulation # " + (i+1) + ": " + sim.simulate());
         }
 
         sim.testHops = hopSequences[0];
